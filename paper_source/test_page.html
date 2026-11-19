@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+@page { size: A4 portrait; margin: 0; }
+body { margin: 0; padding: 0; font-family: 'Times New Roman', serif; }
+.page {
+  width: 210mm; height: 297mm; box-sizing: border-box;
+  padding: 10mm 16mm 10mm 16mm; position: relative;
+  page-break-after: always; break-after: page; overflow: hidden;
+}
+.header {
+  height: 14mm; border-bottom: 0.5px solid #888;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  font-size: 8.5pt; line-height: 1.25; margin-bottom: 3mm;
+}
+.footer {
+  position: absolute; bottom: 8mm; left: 16mm; right: 16mm;
+  height: 6mm; border-top: 0.5px solid #888; padding-top: 1.5mm;
+  display: flex; justify-content: space-between; font-size: 8pt;
+}
+.content {
+  column-count: 2; column-gap: 18px; text-align: justify; font-size: 9.5pt; line-height: 1.32;
+}
+</style>
+</head>
+<body>
+<div class='page'>
+  <div class='header'>
+    <div><b>International Journal of Scientific Research in Engineering and Management (IJSREM)</b><br>Volume: 10 Issue: 10 | Oct - 2026</div>
+    <div style='text-align:right'><b>SJIF Rating: 8.659</b><br><b>ISSN: 2582-3930</b></div>
+  </div>
+  <div class='content'>
+    <h2 style='column-span:all; text-align:center; font-size:14pt; margin: 5px 0 10px 0;'>Test Academic Paper Title</h2>
+    <p>This is a test paragraph verifying that Chrome renders running headers, two columns, and running footers natively into a single compliant PDF without PyMuPDF post-processing or stream corruption.</p>
+    <p>Another paragraph in the test column to check line flow and font rendering.</p>
+  </div>
+  <div class='footer'>
+    <div>© 2026, IJSREM | https://ijsrem.com</div>
+    <div>DOI: | Page 1</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+# Node modules
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Environment files (secrets)
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.local
+
+# MongoDB / Database files
+data/
+mongodb_data/
+*.log
+mongod.log*
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Report generation temp/scratch files
+report_assets/
+check_*.py
+crop_*.py
+analyze_ref.py
+capture_all_screens*.py
+generate_report_assets.py
+complete_user_report.py
+build_complete_honors_report.py
+ref_cover_logo.png
+ref_page*.png
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Misc
+*.tmp
+*.bak
