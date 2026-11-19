@@ -57,12 +57,15 @@ app.use(express.json());
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests with no origin (e.g. mobile apps, curl, Postman)
-      // or from localhost / any 10.x.x.x / 192.168.x.x local network IP
+      // Allow requests with no origin (mobile apps, curl, Postman)
+      // or from localhost / local network IPs / Vercel deployments
       const isAllowed =
         !origin ||
-        /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin) ||
-        /^http:\/\/(10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+)(:\d+)?$/.test(origin);
+        /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin) ||
+        /^https?:\/\/(10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+)(:\d+)?$/.test(origin) ||
+        /\.vercel\.app$/.test(origin) ||
+        /\.onrender\.com$/.test(origin) ||
+        (process.env.ALLOWED_ORIGIN && origin === process.env.ALLOWED_ORIGIN);
       callback(isAllowed ? null : new Error("CORS blocked"), isAllowed);
     },
     credentials: true,
