@@ -151,6 +151,53 @@ export const Login = () => {
             </button>
           </form>
 
+          {/* Quick Demo Credentials Pill Bar (Password: 1234) */}
+          <div className="mt-5 p-3.5 bg-slate-50 rounded-2xl border border-slate-200/80">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
+                Quick Demo Sign-in
+              </span>
+              <span className="text-[10px] font-bold font-mono px-2 py-0.5 rounded-md bg-indigo-100 text-indigo-700">
+                Pass: 1234
+              </span>
+            </div>
+            <div className="grid grid-cols-3 gap-1.5 text-center">
+              <button
+                type="button"
+                onClick={() => {
+                  setEmail("admin@platform.com");
+                  setPassword("1234");
+                }}
+                className="p-1.5 rounded-lg bg-white border border-slate-200 hover:border-indigo-400 hover:bg-indigo-50/50 text-[11px] font-bold text-purple-700 transition-all cursor-pointer shadow-2xs"
+                title="Fill Admin Login (Password: 1234)"
+              >
+                Admin
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setEmail("raghuwanshikartik881@gmail.com");
+                  setPassword("1234");
+                }}
+                className="p-1.5 rounded-lg bg-white border border-slate-200 hover:border-indigo-400 hover:bg-indigo-50/50 text-[11px] font-bold text-indigo-700 transition-all cursor-pointer shadow-2xs"
+                title="Fill Counselor Login for Ram Meghe (Password: 1234)"
+              >
+                Counselor
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setEmail("raghuwanshikartik521@gmail.com");
+                  setPassword("1234");
+                }}
+                className="p-1.5 rounded-lg bg-white border border-slate-200 hover:border-emerald-400 hover:bg-emerald-50/50 text-[11px] font-bold text-emerald-700 transition-all cursor-pointer shadow-2xs"
+                title="Fill Student Login for Ram Meghe (Password: 1234)"
+              >
+                Student
+              </button>
+            </div>
+          </div>
+
           <div className="mt-5 pt-5 border-t border-slate-100 text-center">
             <p className="text-xs text-slate-500">
               New Institution?{" "}
